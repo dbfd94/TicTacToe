@@ -99,13 +99,14 @@ namespace TicTacToe
                         break;
                 }
                 selectedValues[turn] = inputAsInt;
-                DetermineWinner();
                 turn++;
+                DetermineWinner();
                 DetermineDraw();
             } while (turn <= 10);
         }
         static void PrintBoard()
         {
+            Console.Clear();
             Console.WriteLine("     |     |     ");
             Console.WriteLine($"  {array2D[0, 0]}  |  {array2D[0, 1]}  |  {array2D[0, 2]}   ");
             Console.WriteLine("____ |_____|_____");
