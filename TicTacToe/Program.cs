@@ -98,11 +98,11 @@ namespace TicTacToe
                         array2D[2, 2] = xOrO;
                         break;
                 }
-                DetermineWinner();
                 selectedValues[turn] = inputAsInt;
+                DetermineWinner();
                 turn++;
                 DetermineDraw();
-            } while (turn <= 9);
+            } while (turn <= 10);
         }
         static void PrintBoard()
         {
@@ -144,7 +144,7 @@ namespace TicTacToe
                 Console.WriteLine($"{currentPlayer} has won the game!");
                 Console.WriteLine("Press any key to re-start the game:");
                 Console.ReadKey();
-                turn = 0;
+                turn = 1;
                 array2D[0, 0] = "1";
                 array2D[0, 1] = "2";
                 array2D[0, 2] = "3";
@@ -165,7 +165,7 @@ namespace TicTacToe
                 Console.WriteLine("Match was a draw!");
                 Console.WriteLine("Press any key to re-start the game:");
                 Console.ReadKey();
-                turn = 0;
+                turn = 1;
                 array2D[0, 0] = "1";
                 array2D[0, 1] = "2";
                 array2D[0, 2] = "3";
